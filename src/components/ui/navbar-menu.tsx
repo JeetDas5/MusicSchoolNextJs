@@ -3,6 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
+import { LinkProps } from 'next/link';
 
 const transition = {
   type: "spring",
@@ -109,7 +110,7 @@ export const ProductItem = ({
   );
 };
 
-export const HoveredLink = ({ children, ...rest }: any) => {
+export const HoveredLink = ({ children, ...rest }: { children: React.ReactNode } & LinkProps) => {
   return (
     <Link
       {...rest}
